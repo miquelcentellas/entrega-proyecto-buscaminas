@@ -1,0 +1,9 @@
+@use "../abstracts";
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: abstracts.$font;
+  font: normal 125% / 1.4 abstracts.$font;
+}

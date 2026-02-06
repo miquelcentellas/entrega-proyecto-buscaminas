@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #363535;
+  color: black;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+p {
+  color: white;
+  margin-left: 5px;
+}
+#menu {
+  margin-bottom: 10px;
+  p {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#tablero {
+  position: relative;
+  display: inline-block;
+}
+
+.celda {
+  width: 40px;
+  height: 40px;
+  background: #79797a; /* color inicial, sin descubrir */
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.celda.descubierta {
+  background: #dcdcdc; /* color más claro para mostrar que está descubierta */
+  border: 1px solid #999; /* borde más tenue */
+  cursor: default;
+}
+
+.celda.mina {
+  background: red;
+}
+
+#mensaje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.oculto {
+  display: none;
+}
